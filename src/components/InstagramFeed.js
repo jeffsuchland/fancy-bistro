@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Section from './common/Section';
+import { insta1, insta2, insta3, insta4 } from '../assets/images';
 
 const FeedSection = styled(Section)`
   background-color: ${props => props.theme.colors.cream};
@@ -75,23 +76,27 @@ const Overlay = styled.div`
 const instagramPosts = [
   {
     id: 1,
-    image: '/images/insta-1.jpg',
-    caption: 'Fresh from the garden: Today\'s harvest inspiring tonight\'s special'
+    image: insta1,
+    likes: 234,
+    caption: "Today's special: Pan-seared scallops with citrus beurre blanc"
   },
   {
     id: 2,
-    image: '/images/insta-2.jpg',
-    caption: 'Behind the scenes with our chef preparing the perfect dish'
+    image: insta2,
+    likes: 187,
+    caption: "Behind the scenes with our pastry chef"
   },
   {
     id: 3,
-    image: '/images/insta-3.jpg',
-    caption: 'Weekend brunch vibes at The Verdant Fork'
+    image: insta3,
+    likes: 342,
+    caption: "Fresh ingredients from our local farm partners"
   },
   {
     id: 4,
-    image: '/images/insta-4.jpg',
-    caption: 'Craft cocktails that complement our seasonal menu'
+    image: insta4,
+    likes: 156,
+    caption: "Craft cocktails at our bar"
   }
 ];
 

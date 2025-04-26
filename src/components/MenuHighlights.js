@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Section from './common/Section';
+import { burger, risotto, salmon } from '../assets/images';
 
 const HighlightsSection = styled(Section)`
   background-color: ${props => props.theme.colors.cream};
@@ -82,24 +83,26 @@ const Price = styled.span`
 const menuItems = [
   {
     id: 1,
-    name: "Pacific Northwest Salmon",
-    description: "Wild-caught salmon, herb-crusted and served with seasonal vegetables",
-    price: "$32",
-    image: "/images/salmon.jpg"
+    name: 'Pacific Northwest Salmon',
+    description: 'Wild-caught salmon with roasted seasonal vegetables and herb-infused oil',
+    price: '$32',
+    image: salmon,
+    dietary: ['gf']
   },
   {
     id: 2,
-    name: "Forest Mushroom Risotto",
-    description: "Local wild mushrooms, aged parmesan, fresh herbs",
-    price: "$26",
-    image: "/images/risotto.jpg"
+    name: 'Wild Mushroom Risotto',
+    description: 'Creamy arborio rice with locally foraged mushrooms and aged parmesan',
+    price: '$26',
+    image: risotto,
+    dietary: ['v']
   },
   {
     id: 3,
-    name: "Portland Craft Burger",
-    description: "Grass-fed beef, artisanal cheddar, house-made pickles",
-    price: "$24",
-    image: "/images/burger.jpg"
+    name: 'Artisanal Burger',
+    description: 'House-ground beef with aged cheddar, caramelized onions, and house-made brioche',
+    price: '$24',
+    image: burger
   }
 ];
 

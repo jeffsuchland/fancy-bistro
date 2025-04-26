@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Section from './common/Section';
 import { useModal } from '../context/ModalContext';
+import { chefsTable, jazzBrunch, wineTasting } from '../assets/images';
 
 const EventsSection = styled(Section)`
   background-color: ${props => props.theme.colors.cream};
@@ -91,27 +92,27 @@ const EventButton = styled(motion.button)`
 const events = [
   {
     id: 1,
-    title: "Wine Tasting Evening",
-    date: "May 15, 2025",
-    description: "Join our sommelier for an evening of Pacific Northwest wines paired with seasonal appetizers.",
-    image: "/images/wine-tasting.jpg",
-    price: "$75 per person"
+    title: "Chef's Table Experience",
+    date: "Every Friday",
+    description: "An intimate dining experience featuring a specially curated tasting menu by our head chef.",
+    price: "$125 per person",
+    image: chefsTable
   },
   {
     id: 2,
-    title: "Chef's Table Experience",
-    date: "May 22, 2025",
-    description: "An intimate 7-course tasting menu with our executive chef, featuring the season's finest ingredients.",
-    image: "/images/chefs-table.jpg",
-    price: "$120 per person"
+    title: "Sunday Jazz Brunch",
+    date: "Sundays 10am-2pm",
+    description: "Enjoy our farm-fresh brunch menu while listening to live jazz performances.",
+    price: "$45 per person",
+    image: jazzBrunch
   },
   {
     id: 3,
-    title: "Sunday Jazz Brunch",
-    date: "Every Sunday",
-    description: "Enjoy live jazz with our special brunch menu featuring local musicians and fresh pastries.",
-    image: "/images/jazz-brunch.jpg",
-    price: "$45 per person"
+    title: "Wine Tasting Evening",
+    date: "Last Thursday Monthly",
+    description: "Sample our curated wine selection paired with regional cheeses and appetizers.",
+    price: "$75 per person",
+    image: wineTasting
   }
 ];
 

@@ -3,13 +3,14 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Section from './common/Section';
 import { useModal } from '../context/ModalContext';
+import { restaurantBg } from '../assets/images';
 
 const CTASection = styled(Section)`
   position: relative;
   width: 100%;
   overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('/images/reservation-bg.jpg') center/cover no-repeat;
+    url(${restaurantBg}) center/cover no-repeat;
   color: white;
   text-align: center;
   

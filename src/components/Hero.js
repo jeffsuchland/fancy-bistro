@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useModal } from '../context/ModalContext';
+import { heroBg } from '../assets/images';
 
 const HeroSection = styled.section`
   height: 100vh;
@@ -22,7 +23,7 @@ const HeroBackground = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('/images/hero-bg.jpg') center/cover no-repeat;
+    url(${heroBg}) center/cover no-repeat;
   z-index: 1;
 `;
 

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Section from './common/Section';
+import { aboutInterior } from '../assets/images';
 
 const AboutSection = styled(Section)`
   background-color: white;
@@ -43,18 +44,12 @@ const Description = styled.p`
   color: ${props => props.theme.colors.secondary};
 `;
 
-const ImageContainer = styled(motion.div)`
-  position: relative;
-  height: 500px;
-  overflow: hidden;
+const ImageContainer = styled.div`
+  flex: 1;
+  min-height: 400px;
+  background: url(${aboutInterior}) center/cover no-repeat;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
 const About = () => {
@@ -79,14 +74,7 @@ const About = () => {
             a testament to our commitment to freshness and innovation.
           </Description>
         </Content>
-        <ImageContainer
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <img src="/images/about-interior.jpg" alt="The Verdant Fork Interior" />
-        </ImageContainer>
+        <ImageContainer />
       </Container>
     </AboutSection>
   );
