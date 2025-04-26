@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Section from './common/Section';
+import { map } from '../assets/images';
 
 const LocationSection = styled(Section)`
   background-color: white;
@@ -36,16 +37,12 @@ const Grid = styled.div`
 `;
 
 const MapContainer = styled.div`
-  height: 400px;
+  width: 100%;
+  height: 300px;
+  background: url(${map}) center/cover no-repeat;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: ${props => props.theme.spacing.md};
 `;
 
 const InfoContainer = styled(motion.div)`
@@ -118,9 +115,6 @@ const Location = () => {
       <Container>
         <Title>Find Us</Title>
         <Grid>
-          <MapContainer>
-            <img src="/images/map.jpg" alt="Restaurant location map" />
-          </MapContainer>
           <InfoContainer
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -158,6 +152,8 @@ const Location = () => {
               </ul>
             </ParkingInfo>
           </InfoContainer>
+
+          <MapContainer />
         </Grid>
       </Container>
     </LocationSection>
